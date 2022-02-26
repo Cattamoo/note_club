@@ -1,0 +1,54 @@
+@value mainColor, mainDarkColor, whiteColor, blackColor, buttonColor, buttonBackgroundColor from '../../common/colors.css';
+
+.container {
+    width: 300px;
+}
+
+.login {
+    background-color: whiteColor;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title {
+    width: 100%;
+    color: mainColor;
+    background-color: blackColor;
+    font-size: 2rem;
+    text-align: center;
+    padding-bottom: 0.5em;
+    margin: 0;
+}
+
+.loginButtonGroup {
+    flex: 1;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: buttonBackgroundColor;
+    padding: 1em;
+}
+
+.button {
+    width: auto;
+    padding: 0.3em;
+    border-radius: 50%;
+    border: 0;
+    font-size: 1.8em;
+    font-weight: bold;
+    background-color: buttonColor;
+    cursor: pointer;
+    box-shadow: 0 0 5px blackColor;
+    transition: 0.5s;
+}
+
+.button.twitter {
+    color: #1DA1F2;
+}
+
+.button:hover {
+    background-color: buttonBackgroundColor;
+    color: mainDarkColor;
+}

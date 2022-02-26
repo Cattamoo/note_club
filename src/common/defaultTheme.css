@@ -1,0 +1,8 @@
+@value mainColor, mainDarkColor, whiteColor, greyColor, lightBlueColor, blackColor, buttonColor, buttonBackgroundColor from './colors.css';
+
+@value noteBackground: buttonBackgroundColor;
+@value detailBackground: mainDarkColor;
+@value detailTextColor: blackColor;
+
+@value titleColor: buttonColor;
+@value titleTextColor: whiteColor;

@@ -1,0 +1,48 @@
+@value mainColor, mainDarkColor, whiteColor, greyColor, lightBlueColor, lightRedColor, blackColor, buttonColor, buttonBackgroundColor from '../../common/colors.css';
+
+.header {
+    position: relative;
+    background-color: blackColor;
+    padding: 1em;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.title {
+    color: mainColor;
+}
+
+.logout {
+    position: absolute;
+    right: 1em;
+    padding: 0.5em;
+    border: 0;
+    border-radius: 1em;
+    background-color: buttonColor;
+    color: whiteColor;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.logout:hover {
+    background-color: buttonBackgroundColor;
+    color: greyColor;
+}
+
+.buttonGroup {
+    color: greyColor;
+}
+.button {
+    color: whiteColor;
+    background: none;
+    border: 0;
+    margin: 0 0.25em;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.add:hover {
+    color: lightRedColor;
+}
+.setting:hover {
+    color: lightBlueColor;
+}

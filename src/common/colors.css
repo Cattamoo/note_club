@@ -1,0 +1,22 @@
+/**
+ *  Main Colors
+ */
+@value mainColor: #FFDDAA;
+@value mainDarkColor: #EECC99;
+@value lightPinkColor: #FF9D7E;
+
+/**
+ *  Common Colors
+ */
+@value backgroundColor: #555555;
+@value whiteColor: #FFFDFA;
+@value greyColor: #999999;
+@value lightBlueColor: #5597A7;
+@value lightRedColor: #FFA7A3;
+@value blackColor: #222320;
+
+/**
+ *  Button Colors
+ */
+@value buttonColor: #393939;
+@value buttonBackgroundColor: #292929;
