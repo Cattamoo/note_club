@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+    <style>
+        body{background-color: #5D5D5D;}
+       .calcu{margin: 35px; text-align: center; margin-top: 35px; font-size: 20px; background-color:#4C4C4C;}
+       .int_btn{width: 125px; height: 65px; font-size: 20px; background-color:#4C4C4C;}
+       .cal_btn{width: 125px; height: 65px; font-size: 20px; background-color:#4C4C4C;}
+       #str{width:510px; height:45px; text-align: right; font-size: 20px; background-color:#4C4C4C;}
+    </style>
+</head>
+</head>
+<body>
+
+<h2 style="margin-top:35px;text-align: center" >계산기 냠냠</h2>
+<p id="demo"></p>
+
+<script type ="text/javascript">
+    function inputtext(char){
+    var str = document.getElementById("str");
+    str.value += char;
+    }
+    function remove(){
+        var str = document.getElementById("str");
+        str.value = "";
+    }
+
+    function calculate(){
+        var str = document.getElementById("str");
+        str.value = eval(str.value);
+    }
+
+
+</script>
+    <div class="calcu">
+            <input type="text" id="str" value="" readonly>
+            <br/>
+            <input type ="button" class="int_btn" value="1" onclick="inputtext(1)">
+            <input type ="button" class="int_btn" value="2" onclick="inputtext(2)">
+            <input type ="button" class="int_btn" value="3" onclick="inputtext(3)">
+            <input type ="button" class="int_btn" value="*" onclick="inputtext('*')">
+            <br/>
+
+            <input type ="button" class="int_btn" value="4" onclick="inputtext(4)">
+            <input type ="button" class="int_btn" value="5" onclick="inputtext(5)">
+            <input type ="button" class="int_btn" value="6" onclick="inputtext(6)">
+            <input type ="button" class="int_btn" value="/" onclick="inputtext('/')">
+            <br/>
+
+            <input type ="button" class="int_btn" value="7" onclick="inputtext(7)">
+            <input type ="button" class="int_btn" value="8" onclick="inputtext(8)">
+            <input type ="button" class="int_btn" value="9" onclick="inputtext(9)">
+            <input type ="button" class="int_btn" value="+" onclick="inputtext('+')">
+
+            <br/>
+
+            <input type ="button" class="cal_btn" value="c" onclick="remove()">
+            <input type ="button" class="int_btn" value="0" onclick="inputtext(0)">
+            <input type ="button" class="cal_btn" value="=" onclick="calculate()">
+            <input type ="button" class="cal_btn" value="-" onclick="inputtext('-')">
+            
+            <br/>
+
+    </div> 
+</body>
+</html>
