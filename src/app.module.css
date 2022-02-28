@@ -1,6 +1,6 @@
 @value mainColor, mainDarkColor, backgroundColor from './common/colors.css';
 
-* {
+html * {
     box-sizing: border-box;
 }
 

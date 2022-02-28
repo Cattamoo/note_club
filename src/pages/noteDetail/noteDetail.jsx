@@ -3,6 +3,7 @@ import {useLocation, useNavigate} from "react-router-dom";
 
 import Header from "../../components/header/header";
 import Footer from "../../components/footer/footer";
+import Calculator from "../../components/calculator/calculator";
 
 import styles from './noteDetail.module.css';
 import Note from "../../components/note/note";
@@ -13,6 +14,7 @@ const NoteDetail = ({ authService, noteRepository }) => {
 
     const [userId, setUserId] = useState(location.state && location.state.id);
     const [notes, setNotes] = useState({});
+    const [calculator, setCalculator] = useState(false);
     const onLogout = useCallback(() => {
         authService.logout();
     }, [authService]);
@@ -32,6 +34,9 @@ const NoteDetail = ({ authService, noteRepository }) => {
         });
         noteRepository.removeNote(userId, noteId);
     }
+    const setCalculatorState = () => {
+        setCalculator(!calculator);
+    }
     // mount
     useEffect(() => {
         if(!userId) {
@@ -48,7 +53,7 @@ const NoteDetail = ({ authService, noteRepository }) => {
             if(user) {
                 setUserId(user.uid);
             } else {
-                navigate('/');
+                navigate('/note_club');
             }
         })
     }, [authService, userId, navigate]);
@@ -56,8 +61,10 @@ const NoteDetail = ({ authService, noteRepository }) => {
     return (
         <section className={styles.container}>
             <Header
+                onCalculator={setCalculatorState}
                 onLogout={onLogout}
                 addNote={updateNote} />
+            {calculator && <Calculator onCalculator={setCalculatorState} />}
             <div className={styles.contents}>
                 {
                     Object.keys(notes).map((key) => {

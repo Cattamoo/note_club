@@ -16,7 +16,7 @@
     background-color: buttonBackgroundColor;
     color: whiteColor;
     margin: 0;
-    overflow: auto;
+    overflow-y: auto;
 }
 
 @media screen and (max-width: mediaQuery) {

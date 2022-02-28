@@ -14,7 +14,7 @@ const Login = ({ authService }) => {
     const navigate = useNavigate();
     const goToNoteList = (userId) => {
         navigate(
-            '/note',
+            '/note_club/note',
             {state: { id: userId }},
         );
     }

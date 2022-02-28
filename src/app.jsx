@@ -11,7 +11,8 @@ function App({ authService, noteRepository }) {
         <div className={styles.app}>
             <Routes>
                 <Route path="/" element={<Login authService={authService} />} exact />
-                <Route path="/note" element={<NoteDetail authService={authService} noteRepository={noteRepository} />} exact />
+                <Route path="/note_club" element={<Login authService={authService} />} exact />
+                <Route path="/note_club/note" element={<NoteDetail authService={authService} noteRepository={noteRepository} />} exact />
             </Routes>
         </div>
     );

@@ -1,6 +1,8 @@
 @value mainColor, mainDarkColor, whiteColor, blackColor, buttonColor, buttonBackgroundColor from '../../common/colors.css';
+@value mediaQuery from '../../common/size.css';
 
 .container {
+    background-color: blackColor;
     width: 300px;
 }
 
@@ -51,4 +53,14 @@
 .button:hover {
     background-color: buttonBackgroundColor;
     color: mainDarkColor;
+}
+
+@media screen and (max-width: mediaQuery) {
+    .container {
+        width: 100%;
+        height: 100%;
+    }
+    * {
+        font-size: 1.2em;
+    }
 }

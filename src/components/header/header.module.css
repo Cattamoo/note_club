@@ -1,10 +1,11 @@
 @value mainColor, mainDarkColor, whiteColor, greyColor, lightBlueColor, lightRedColor, blackColor, buttonColor, buttonBackgroundColor from '../../common/colors.css';
+@value mediaQuery from '../../common/size.css';
 
 .header {
     position: relative;
     background-color: blackColor;
     padding: 1em;
-    font-size: 1.2em;
+    font-size: 1.2rem;
     font-weight: bold;
 }
 
@@ -45,4 +46,10 @@
 }
 .setting:hover {
     color: lightBlueColor;
+}
+
+@media screen and (max-width: mediaQuery) {
+    .button, .logout {
+        font-size: 0.75rem;
+    }
 }

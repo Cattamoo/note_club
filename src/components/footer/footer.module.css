@@ -3,7 +3,7 @@
 .footer {
     background-color: blackColor;
     padding: 1.2em 1em;
-    font-size: 0.8em;
+    font-size: 0.8rem;
     display: flex;
     justify-content: space-between;
     color: mainDarkColor;
@@ -16,6 +16,7 @@
 .linkBox .link {
     margin-left: 0.5em;
 }
+.link:link,
 .link:visited {
     color: mainDarkColor;
 }
